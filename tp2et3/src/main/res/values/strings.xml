@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Newspaper</string>
+    <string-array name="sujets">
+        <item>Bitcoins</item>
+        <item>Entreprises américaines</item>
+        <item>Apple</item>
+        <item>TechCrunch</item>
+        <item>Journal de Wall Street</item>
+    </string-array>
+</resources>

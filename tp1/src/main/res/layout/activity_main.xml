@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/maContrainte1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupe1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="historique,effacer,boutonC,boutonParentheses,boutonPourcentage,boutonDivise,boutonMultiplie,boutonMoins,boutonPlus,boutonEgal,bouton0,bouton1,bouton2,bouton3,bouton4,bouton5,bouton6,bouton7,bouton8,bouton9,boutonInverse,boutonVirgule,affichage,guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Première colonne -->
+    <Button
+        android:id="@+id/boutonC"
+        android:text="C"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="onClick"
+        android:textColor="#0588C5"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <Button
+        android:id="@+id/bouton7"
+        android:text="7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:backgroundTint="#E6E6E6"
+        android:onClick="onClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boutonC"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/bouton4"
+        android:text="4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:backgroundTint="#E6E6E6"
+        android:onClick="onClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bouton7"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/bouton1"
+        android:text="1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:backgroundTint="#E6E6E6"
+        android:onClick="onClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bouton4"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/boutonVirgule"
+        android:text=","
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:backgroundTint="#E6E6E6"
+        android:onClick="onClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bouton1"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!-- Deuxième colonne -->
+    <Button
+        android:id="@+id/boutonParentheses"
+        android:text="()"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:textColor="#0588C5"
+        android:textStyle="bold"
+        android:onClick="onClick"
+        app:layout_constraintStart_toEndOf="@+id/boutonC"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/bouton8"
+        android:text="8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:backgroundTint="#E6E6E6"
+        android:onClick="onClick"
+        app:layout_constraintStart_toEndOf="@+id/boutonC"
+        app:layout_constraintTop_toBottomOf="@id/boutonParentheses"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/bouton5"
+        android:text="5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:backgroundTint="#E6E6E6"
+        android:onClick="onClick"
+        app:layout_constraintStart_toEndOf="@+id/boutonC"
+        app:layout_constraintTop_toBottomOf="@id/bouton8"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/bouton2"
+        android:text="2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:backgroundTint="#E6E6E6"
+        android:onClick="onClick"
+        app:layout_constraintStart_toEndOf="@+id/boutonC"
+        app:layout_constraintTop_toBottomOf="@id/bouton5"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/bouton0"
+        android:text="0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:backgroundTint="#E6E6E6"
+        android:onClick="onClick"
+        app:layout_constraintStart_toEndOf="@+id/boutonC"
+        app:layout_constraintTop_toBottomOf="@id/bouton2"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <!-- Troisième colonne -->
+    <Button
+        android:id="@+id/boutonPourcentage"
+        android:text="%"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:textColor="#0588C5"
+        android:textStyle="bold"
+        android:onClick="onClick"
+        app:layout_constraintStart_toEndOf="@+id/boutonParentheses"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/bouton9"
+        android:text="9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:backgroundTint="#E6E6E6"
+        android:onClick="onClick"
+        app:layout_constraintStart_toEndOf="@+id/boutonParentheses"
+        app:layout_constraintTop_toBottomOf="@id/boutonPourcentage"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/bouton6"
+        android:text="6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:backgroundTint="#E6E6E6"
+        android:onClick="onClick"
+        app:layout_constraintStart_toEndOf="@+id/boutonParentheses"
+        app:layout_constraintTop_toBottomOf="@id/bouton9"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/bouton3"
+        android:text="3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:backgroundTint="#E6E6E6"
+        android:onClick="onClick"
+        app:layout_constraintStart_toEndOf="@+id/boutonParentheses"
+        app:layout_constraintTop_toBottomOf="@id/bouton6"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/boutonInverse"
+        android:text="+ / -"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:backgroundTint="#E6E6E6"
+        android:onClick="onClick"
+        app:layout_constraintStart_toEndOf="@+id/boutonParentheses"
+        app:layout_constraintTop_toBottomOf="@id/bouton3"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <!-- Quatrième colonne -->
+    <Button
+        android:id="@+id/boutonDivise"
+        android:text="/"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:textColor="#0588C5"
+        android:textStyle="bold"
+        android:onClick="onClick"
+        app:layout_constraintStart_toEndOf="@+id/boutonPourcentage"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/boutonMultiplie"
+        android:text="x"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:textColor="#0588C5"
+        android:onClick="onClick"
+        app:layout_constraintStart_toEndOf="@+id/boutonPourcentage"
+        app:layout_constraintTop_toBottomOf="@id/boutonDivise"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/boutonMoins"
+        android:text="\-"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:textColor="#0588C5"
+        android:textStyle="bold"
+        android:onClick="onClick"
+        app:layout_constraintStart_toEndOf="@+id/boutonPourcentage"
+        app:layout_constraintTop_toBottomOf="@id/boutonMultiplie"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/boutonPlus"
+        android:text="+"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:textColor="#0588C5"
+        android:textStyle="bold"
+        android:onClick="onClick"
+        app:layout_constraintStart_toEndOf="@+id/boutonPourcentage"
+        app:layout_constraintTop_toBottomOf="@id/boutonMoins"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <Button
+        android:id="@+id/boutonEgal"
+        android:text="="
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintHeight_percent="0.1"
+        android:textSize="28sp"
+        android:textColor="#ffffff"
+        android:backgroundTint="#03B600"
+        android:textStyle="bold"
+        android:onClick="onClick"
+        app:layout_constraintStart_toEndOf="@+id/boutonPourcentage"
+        app:layout_constraintTop_toBottomOf="@id/boutonPlus"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/historique"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25sp"
+        android:layout_marginBottom="15sp"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:text="@string/historique"
+        android:textColor="#0588C5"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/effacer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5sp"
+        android:layout_marginEnd="5sp"
+        android:onClick="onClick"
+        android:backgroundTint="#ffffff"
+        app:srcCompat="@mipmap/erase_button"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/affichage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="cursive"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
